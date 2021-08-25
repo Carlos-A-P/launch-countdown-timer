@@ -1,0 +1,156 @@
+:root {
+	--Grayish-blue: hsl(237, 18%, 59%);
+	--Soft-red: hsl(345, 95%, 68%);
+	--White: hsl(0, 0%, 100%);
+	--Dark-desaturated-blue: hsl(236, 21%, 26%);
+	--Very-dark-blue: hsl(235, 16%, 14%);
+	--Very-dark-black-blue/*(mostly black)*/ : hsl(234, 17%, 12%);
+}
+
+body {
+	margin: 0;
+	font-family: "Red Hat Text", sans-serif;
+	height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 8rem 0.5rem 2rem;
+	/* width: 100vw; */
+	/* height: 100vh; */
+	/* min-height: 70vh; */
+	background-color: var(--Very-dark-blue);
+	background-image: url(../images/bg-stars.svg),
+		url(../images/pattern-hills.svg),
+		linear-gradient(to bottom, hsl(234, 17%, 12%), hsl(268, 25%, 14%));
+	background-repeat: no-repeat;
+	background-position: top 0 left 0, bottom 0 left -54rem;
+}
+
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h1 {
+	padding: 0 1rem 0;
+	color: white;
+	text-transform: uppercase;
+	font-size: 15px;
+	letter-spacing: 8px;
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+.flip-clock {
+	/* position: absolute;
+	top: 234px;
+	left: 11%; */
+}
+
+.flip-clock__slot {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: var(--Grayish-blue);
+}
+
+.card__bottom,
+.card__back::after {
+	background: var(--Dark-desaturated-blue);
+	color: var(--Soft-red);
+	padding: 0.19em 0.25em;
+}
+
+.card__top,
+.card__back::before {
+	background: hsl(236, 24%, 23%);
+	color: hsl(345, 95%, 68%, 0.8);
+	padding: 0.35em 0.25em 0;
+}
+
+.card__top,
+.card__bottom,
+.card__back::before,
+.card__back::after {
+	height: 1em;
+	width: 2em;
+}
+
+.icons {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.icons img:hover {
+	filter: brightness(1) sepia(1) hue-rotate(-59deg) saturate(5);
+}
+
+.wrapper {
+	text-align: center;
+}
+/* timer styling */
+.flipdown.flipdown__theme-dark .rotor-group-heading:before {
+	color: var(--Grayish-blue);
+	text-transform: uppercase;
+	font-size: 8px;
+	letter-spacing: 3px;
+}
+footer {
+	margin-top: 425px;
+	color: white;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 575px) {
+	body {
+		padding: 8rem 0.5rem 2rem;
+
+		background-position: top 80px left 0, bottom 0 left 0rem, top 0 left 0;
+		background-size: auto, 100%;
+	}
+
+	.flip-clock__slot {
+		margin-top: 10px;
+		letter-spacing: 5px;
+	}
+
+	.card {
+		font-size: 56px;
+		line-height: 1.05;
+		margin-bottom: 24px;
+	}
+
+	footer {
+		margin-top: 430px;
+		color: white;
+	}
+
+	h1 {
+		padding: 0 1rem 0;
+		color: white;
+		text-transform: uppercase;
+		font-size: 18px;
+		letter-spacing: 7px;
+		margin-bottom: 5rem;
+		text-align: center;
+	}
+
+	.flip-clock__piece {
+		display: inline-block;
+		margin: 0 10px;
+	}
+}
