@@ -40,6 +40,8 @@ Users should be able to:
 
 In this challenge I used the a javascript code from Website [CodePen Home Flip Clock & Countdown](https://codepen.io/shshaw/pen/vKzoLL) which is a clock made without a HTML so I mainly focused on prioritizing my CSS and changing styles using Devtools. I also added a few changes to the javascript to remove the second timer.
 
+- I learned that in order to implement my own css, I need to consider the order of which my links are placed in.
+
 ```HTML
 <head>
   <meta charset="UTF-8">
